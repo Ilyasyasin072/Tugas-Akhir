@@ -9,3 +9,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('pushfirebase','FirebaseController@PushServer');
 Route::get('pushserver','Pushfire@Push');
 Route::get('suhu','FirebaseController@suhu');
+
+//Evaluasi
+Route::get('evaluasi','FirebaseController@evaluasi');
