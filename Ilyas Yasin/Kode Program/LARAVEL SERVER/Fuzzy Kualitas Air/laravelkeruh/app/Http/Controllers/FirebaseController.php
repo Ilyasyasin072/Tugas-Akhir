@@ -18,7 +18,7 @@ class FirebaseController extends Controller
             $ts = intval($timeNow / 1000);
             $date = DateTime::createFromFormat('U', $ts);
             $str = $date->format(date('d-m-Y_H:i:s'));
-           $fb = Firebase::initialize("https://kekeruhanhydroponics.firebaseio.com/");
+           $fb = Firebase::initialize("");
            // $kualitasair = $request->input('kl');
 
             if ($kekeruhan < 10 && $suhu < 10 ) {
@@ -97,7 +97,7 @@ class FirebaseController extends Controller
             $ts = intval($timeNow / 1000);
             $date = DateTime::createFromFormat('U', $ts);
             $str = $date->format(date('d-m-Y_H:i:s'));
-           $fb = Firebase::initialize("https://kekeruhanhydroponics.firebaseio.com/");
+           $fb = Firebase::initialize("");
 
         if ($suhu < 90){
             $kondisi[0] = 1;
