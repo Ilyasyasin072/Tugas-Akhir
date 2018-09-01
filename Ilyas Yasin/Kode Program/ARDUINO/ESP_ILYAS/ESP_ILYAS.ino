@@ -3,7 +3,7 @@
 #include <OneWire.h>
 
 #define DEBUG true
- const String HOST = "kualitasair.000webhostapp.com"; //your localhost at same ssid, ifconfig
+ const String HOST = ""; //your localhost at same ssid, ifconfig
  SoftwareSerial ser(A2, A3); // TX 2, RX 3
 
   void setup(){
