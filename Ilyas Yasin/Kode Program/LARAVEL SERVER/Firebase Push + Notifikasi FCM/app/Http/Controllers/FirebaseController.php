@@ -11,7 +11,7 @@ class FirebaseController extends Controller
             $kekeruhan = 9;
             if($kekeruhan < 10) { 
                  $kualitasair = 'Jernih';
-                 $fb = Firebase::initialize("https://kekeruhanhydroponics.firebaseio.com/");
+                 $fb = Firebase::initialize("");
                  $nodePushContent = $fb->push('KekeruhanMonitoring', array(
             'Kekeruhan' => $kekeruhan,
             'Kualitasair' => $kualitasair,
@@ -19,7 +19,7 @@ class FirebaseController extends Controller
             }
             if ($kekeruhan > 20 && $kekeruhan < 25 ){
                  $kualitasair = 'Normal';
-                 $fb = Firebase::initialize("https://kekeruhanhydroponics.firebaseio.com/");
+                 $fb = Firebase::initialize("");
                  $nodePushContent = $fb->push('KekeruhanMonitoring', array(
             'Kekeruhan' => $kekeruhan,
             'Kualitasair' => $kualitasair,
@@ -27,15 +27,15 @@ class FirebaseController extends Controller
             } 
             if ($kekeruhan > 25 && $kekeruhan < 30 ) {
                  $kualitasair = 'Keruh';
-                 $fb = Firebase::initialize("https://kekeruhanhydroponics.firebaseio.com/");
+                 $fb = Firebase::initialize("");
                  $nodePushContent = $fb->push('KekeruhanMonitoring', array(
             'Kekeruhan' => $kekeruhan,
             'Kualitasair' => $kualitasair,
                        ));
             // Untuk mengirim Notifikasi ke Android apabila Nilai kekekruhan meningkat hight or Keruh
             $url = "https://fcm.googleapis.com/fcm/send";
-            $token = "f8JwA-XArKc:APA91bElQfKNfFVPwTefnCzy7thgYLwraCJZMVkcjZFCSM8s8RhH0PYbXRW1Vuojc3C27MBgVcFrsDTvFY8lSYNRCkxsTypVy6fPew1_AYmd1AIaQEAsrDeFLuPU-4wj1LyTmqi_XVQ9";
-            $serverKey = 'AAAAX9sti_A:APA91bFvv0coQjxvbfApf5rDR_lI3vhq9AMvi0f5gEVCLh2Uv_t4cEtTrQvooHSe3VwHaOUf4aL0qj02gROrvLlMuCqbbf0FX5-ysf3LNo3eaawE1jUmCXc0urEXc5BCczLZOQjl2E-1';
+            $token = 
+            $serverKey = 
             $title = $kekeruhan;
             $body = $kualitasair;
             $notification = array('title' =>$title , 'body' => $body, 'sound' => 'default', 'badge' => '1');
