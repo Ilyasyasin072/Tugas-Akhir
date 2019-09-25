@@ -93,7 +93,7 @@ String sendCommand(String command, const int timeout, boolean debug) {
    sendCommand("AT+CWMODE=1\r\n", 1000, DEBUG); //
    delay(500);
    Serial.print("Connect to access point...\n");
-   sendCommand("AT+CWJAP=\"Willy-Fachrul\",\"081214130007\"\r\n", 1000, DEBUG);
+   sendCommand("AT+CWJAP=\"SSID\",\"PWD\"\r\n", 1000, DEBUG);
    delay(2000);
    Serial.print("Check IP Address...\n");
    sendCommand("AT+CIFSR\r\n", 1000, DEBUG); // get ip address
